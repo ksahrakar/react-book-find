@@ -57,7 +57,7 @@ class SearchRes extends Component {
         />
         <div className="cardContainer">
             {this.state.results.map(result => (
-              <div className="uk-card uk-card-small uk-card-hover uk-width-5-6" id="bookcard" key={result.id}>
+              <div className="uk-card uk-card-small uk-card-hover uk-width-5-6 uk-align-center" id="bookcard" key={result.id}>
                 <div>
                   <img alt="OOPS...no pic available" src={result.volumeInfo.imageLinks ? result.volumeInfo.imageLinks.thumbnail:"x"}/>
                   <h3 className="uk-card-title">{result.volumeInfo.title}</h3>
