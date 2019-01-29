@@ -28,14 +28,14 @@ class SavedRes extends Component{
         return(
             <div className="cardContainer">
             {this.state.results.map(result => (
-              <div className="uk-card uk-card-small uk-card-hover uk-width-5-6" id="bookcard" key={result._id}>
-                <div>
+              <div className="uk-card uk-card-small uk-card-hover uk-width-1-3 uk-flex-inline" id="bookcard" key={result._id}>
+                <div className="">
                   <img alt="OOPS...no pic available" src={result.image ? result.image:"x"}/>
                   <h3 className="uk-card-title">{result.title}</h3>
-                  <p className="uk-article-meta">Written by {result.authors?result.authors:"Unknown"} in {result.pages} pages</p>
-                  <p className="uk-card-body">{result.description}</p>
+                  <h3 className="uk-article-meta">Written by {result.authors?result.authors:"Unknown"}</h3>
+                  {/* <p className="uk-card-body">{result.description}</p> */}
                   <a href={result.info} className="uk-button uk-button-default uk-button-small">Details</a>
-                  <button onClick={()=>this.deleteBook(result._id)} className="uk-button uk-button-default uk-button-small">Delete</button>
+                  <a onClick={()=>this.deleteBook(result._id)} className="uk-button uk-button-default uk-button-small">Delete</a>
                 </div>
               </div>
             ))}
